@@ -1,18 +1,18 @@
-doc_id,head_text,head_type,relation,tail_text,tail_type,attributes,evidence
-6d41c4acf8b8d1fc,Çin Halk Cumhuriyeti,Country,contains,Urumçi,Location,,"""Çin Halk Cumhuriyeti'nin Urumçi şehrine sefer"""
-6d41c4acf8b8d1fc,Türk Hava Yolları (THY),Company,operates_in_region,Urumçi,Location,,"""Türk Hava Yolları (THY), Çin Halk Cumhuriyeti'nin Urumçi şehrine sefer başlatma kararı aldığını duyurdu"""
-6d41c4acf8b8d1fc,Türk Telekom,Company,,,,,"""Türk Telekom"""
-7055c5d8e2e49d5c,SOCAR,Company,headquartered_in,Azerbaycan Cumhuriyeti,Country,,"""Azerbaycan Cumhuriyeti Devlet Petrol Şirketi SOCAR"""
-7055c5d8e2e49d5c,SOCAR Türkiye,Company,subsidiary_of,SOCAR,Company,,"""SOCAR'ın Türkiye iştiraki SOCAR Türkiye"""
-7055c5d8e2e49d5c,SOCAR Türkiye,Company,operates_in_region,Türkiye,Country,,"""SOCAR'ın Türkiye iştiraki SOCAR Türkiye"""
-7055c5d8e2e49d5c,Azerbaycan Cumhuriyeti,Country,prime_minister,Ali Asadov,Person,,"""Azerbaycan Başbakanı Ali Asadov"""
-7055c5d8e2e49d5c,Gama Enerji A.Ş.,Company,operates_facility,Gama Enerji İç Anadolu enerji santrali,Facility,,"""santralin mevcut sahibi olan Gama Enerji A.Ş."""
-7055c5d8e2e49d5c,SOCAR Türkiye,Company,owns_stake_in,Petkim Petrokimya Holding,Company,"{""ownership_percentage"": ""%51""}","""SOCAR Türkiye Enerji, Petkim Petrokimya Holding'in yüzde 51 oranındaki kontrol hisselerine sahip bulunuyor"""
-7055c5d8e2e49d5c,SOCAR Türkiye,Company,operates_facility,STAR petrol rafinerisi,Facility,,"""Şirket ayrıca Türkiye'de STAR petrol rafinerisini ... hayata geçirdi"""
-7055c5d8e2e49d5c,SOCAR,Company,acquired,Italiana Petroli,Company,,"""SOCAR, 90 yıllık enerji devi Italiana Petroli'yi satın aldı!"""
-7055c5d8e2e49d5c,SOCAR,Company,partners_with,İGA,Company,,"""SOCAR, İGA ve THY ile ortak oldu"""
-7055c5d8e2e49d5c,SOCAR,Company,partners_with,Türk Hava Yolları (THY),Company,,"""SOCAR, İGA ve THY ile ortak oldu"""
-7055c5d8e2e49d5c,MSC,Company,operates_facility,SOCAR Terminal,Facility,,"""MSC, İzmir'deki SOCAR Terminal'e ortak oldu"""
-7055c5d8e2e49d5c,SOCAR Terminal,Facility,located_in,İzmir,City,,"""MSC, İzmir'deki SOCAR Terminal'e ortak oldu"""
-7055c5d8e2e49d5c,Türkiye,Country,contains,Orta Anadolu,Location,,"""SOCAR Türkiye, Orta Anadolu'da bulunan bir kombine çevrim enerji santralinin devralınması için anlaşma aşamasına geçti"""
-7055c5d8e2e49d5c,Suriye,Country,,,,,"""SOCAR ile Suriye hükümeti arasında enerji mutabakatı"""
+doc_id,head_text,head_type,relation,tail_text,tail_type,attributes,evidence,notes
+6d41c4acf8b8d1fc,Çin Halk Cumhuriyeti,Country,contains,Urumçi,Location,,"""Çin Halk Cumhuriyeti'nin Urumçi şehrine sefer""",
+6d41c4acf8b8d1fc,Türk Hava Yolları (THY),Company,operates_in_region,Urumçi,Location,,"""Türk Hava Yolları (THY), Çin Halk Cumhuriyeti'nin Urumçi şehrine sefer başlatma kararı aldığını duyurdu""",
+6d41c4acf8b8d1fc,Türk Telekom,Company,,,,,"""Türk Telekom""",
+7055c5d8e2e49d5c,SOCAR,Company,headquartered_in,Azerbaycan Cumhuriyeti,Country,,"""Azerbaycan Cumhuriyeti Devlet Petrol Şirketi SOCAR""",
+7055c5d8e2e49d5c,SOCAR Türkiye,Company,subsidiary_of,SOCAR,Company,,"""SOCAR'ın Türkiye iştiraki SOCAR Türkiye""",
+7055c5d8e2e49d5c,SOCAR Türkiye,Company,operates_in_region,Türkiye,Country,,"""SOCAR'ın Türkiye iştiraki SOCAR Türkiye""",
+7055c5d8e2e49d5c,Azerbaycan Cumhuriyeti,Country,prime_minister,Ali Asadov,Person,,"""Azerbaycan Başbakanı Ali Asadov""",
+7055c5d8e2e49d5c,Gama Enerji A.Ş.,Company,operates_facility,Gama Enerji İç Anadolu enerji santrali,Facility,,"""santralin mevcut sahibi olan Gama Enerji A.Ş.""",
+7055c5d8e2e49d5c,SOCAR Türkiye,Company,owns_stake_in,Petkim Petrokimya Holding,Company,"{""ownership_percentage"": ""%51""}","""SOCAR Türkiye Enerji, Petkim Petrokimya Holding'in yüzde 51 oranındaki kontrol hisselerine sahip bulunuyor""",
+7055c5d8e2e49d5c,SOCAR Türkiye,Company,operates_facility,STAR petrol rafinerisi,Facility,,"""Şirket ayrıca Türkiye'de STAR petrol rafinerisini ... hayata geçirdi""",
+7055c5d8e2e49d5c,SOCAR,Company,acquired,Italiana Petroli,Company,,"""SOCAR, 90 yıllık enerji devi Italiana Petroli'yi satın aldı!""",
+7055c5d8e2e49d5c,SOCAR,Company,partners_with,İGA,Company,,"""SOCAR, İGA ve THY ile ortak oldu""",
+7055c5d8e2e49d5c,SOCAR,Company,partners_with,Türk Hava Yolları (THY),Company,,"""SOCAR, İGA ve THY ile ortak oldu""",
+7055c5d8e2e49d5c,MSC,Company,operates_facility,SOCAR Terminal,Facility,,"""MSC, İzmir'deki SOCAR Terminal'e ortak oldu""",
+7055c5d8e2e49d5c,SOCAR Terminal,Facility,located_in,İzmir,City,,"""MSC, İzmir'deki SOCAR Terminal'e ortak oldu""",
+7055c5d8e2e49d5c,Türkiye,Country,contains,Orta Anadolu,Location,,"""SOCAR Türkiye, Orta Anadolu'da bulunan bir kombine çevrim enerji santralinin devralınması için anlaşma aşamasına geçti""",
+7055c5d8e2e49d5c,Suriye,Country,,,,,"""SOCAR ile Suriye hükümeti arasında enerji mutabakatı""",
