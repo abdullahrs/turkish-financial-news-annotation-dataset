@@ -134,7 +134,7 @@ Finansal araclarin islem gordugu platform veya borsa.
 | Attribute | Aciklama | Ornek |
 |---|---|---|
 | `name` | Piyasa adi | "Borsa Istanbul" |
-| `market_type` | Piyasa turu | "borsa", "doviz piyasasi" |
+| `market_type` | Piyasa turu | "", "doviz piyasasi" |
 | `market_type_detail` | Tur detayi | "pay piyasasi ve vadeli islem" |
 | `establishment_date` | Kurulus tarihi | "1985" |
 | `market_cap` | Toplam piyasa degeri | "8 trilyon TL" |
