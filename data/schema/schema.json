@@ -1,0 +1,424 @@
+{
+  "Person": {
+    "description": "Individuals who play economic, financial, or managerial roles, such as executives, investors, or economists.",
+    "attributes": [
+      "name",
+      "date_of_birth",
+      "nationality",
+      "specialization"
+    ],
+    "outgoing_relations": {
+      "owns_stake_in": {
+        "cardinality": "m:n",
+        "target_types": ["Company", "Financial_Instrument"],
+        "attributes": ["ownership_percentage", "paid_amount"]
+      },
+      "member_of": {
+        "cardinality": "m:n",
+        "target_types": ["Organization", "Institution"],
+        "attributes": ["start_date", "end_date", "role"]
+      },
+      "invests_in": {
+        "cardinality": "m:n",
+        "target_types": ["Company", "Country", "Financial_Instrument", "Financial_Market"],
+        "attributes": ["investment_amount", "investment_date"]
+      },
+      "has_legal_issues_with": {
+        "cardinality": "m:n",
+        "target_types": ["Company", "Institution", "Country"],
+        "attributes": ["case_type", "description"]
+      }
+    }
+  },
+  "Company": {
+    "description": "Commercial organizations that conduct business activities, including private companies, banks, and corporations.",
+    "attributes": [
+      "name",
+      "trade_name",
+      "ticker_symbol",
+      "category",
+      "founding_date",
+      "ownership_type",
+      "revenue",
+      "profit",
+      "market_cap",
+      "employee_count",
+      "public_private_status"
+    ],
+    "outgoing_relations": {
+      "employs": {
+        "cardinality": "m:n",
+        "target_types": ["Person"],
+        "attributes": ["role", "start_date", "end_date"]
+      },
+      "headquartered_in": {
+        "cardinality": "n:1",
+        "target_types": ["City", "Country"],
+        "attributes": ["since_date"]
+      },
+      "acquired": {
+        "cardinality": "m:n",
+        "target_types": ["Company"],
+        "attributes": ["amount", "currency", "time"]
+      },
+      "operates_in_sector": {
+        "cardinality": "m:n",
+        "target_types": ["Sector"],
+        "attributes": ["since_date"]
+      },
+      "operates_in_region": {
+        "cardinality": "m:n",
+        "target_types": ["Country", "City", "Location"],
+        "attributes": ["since_date"]
+      },
+      "subsidiary_of": {
+        "cardinality": "n:1",
+        "target_types": ["Company"],
+        "attributes": ["ownership_percentage", "since_date"]
+      },
+      "spun_off_from": {
+        "cardinality": "n:1",
+        "target_types": ["Company"],
+        "attributes": ["spinoff_date"]
+      },
+      "listed_on": {
+        "cardinality": "m:n",
+        "target_types": ["Financial_Market"],
+        "attributes": ["ticker_symbol"]
+      },
+      "founded_by": {
+        "cardinality": "m:n",
+        "target_types": ["Person"],
+        "attributes": ["founding_date"]
+      },
+      "owns_stake_in": {
+        "cardinality": "m:n",
+        "target_types": ["Company", "Financial_Instrument"],
+        "attributes": ["ownership_percentage", "paid_amount"]
+      },
+      "competes_with": {
+        "cardinality": "m:n",
+        "target_types": ["Company"],
+        "attributes": ["market"]
+      },
+      "partners_with": {
+        "cardinality": "m:n",
+        "target_types": ["Company", "Organization", "Institution"],
+        "attributes": ["partnership_type"]
+      },
+      "invests_in": {
+        "cardinality": "m:n",
+        "target_types": ["Company", "Country", "Financial_Instrument", "Financial_Market"],
+        "attributes": ["investment_amount", "investment_date"]
+      },
+      "issues": {
+        "cardinality": "m:n",
+        "target_types": ["Financial_Instrument"],
+        "attributes": ["issue_date", "issue_amount", "currency"]
+      },
+      "assigns_rating_to": {
+        "cardinality": "m:n",
+        "target_types": ["Company", "Country", "Financial_Instrument"],
+        "attributes": ["rating_value", "rating_date"]
+      },
+      "produces": {
+        "cardinality": "m:n",
+        "target_types": ["Product"]
+      },
+      "offers_service": {
+        "cardinality": "m:n",
+        "target_types": ["Product"]
+      },
+      "operates_facility": {
+        "cardinality": "m:n",
+        "target_types": ["Facility"]
+      },
+      "has_legal_issues_with": {
+        "cardinality": "m:n",
+        "target_types": ["Company", "Institution", "Country"],
+        "attributes": ["case_type", "description"]
+      }
+    }
+  },
+  "Institution": {
+    "description": "Official public or regulatory bodies that oversee, regulate, or administer financial or economic activities, including ministries, central banks, and authorities.",
+    "attributes": [
+      "name",
+      "acronym",
+      "institution_type",
+      "institution_type_detail",
+      "establishment_date",
+      "jurisdiction",
+      "regulatory_scope",
+      "mandate"
+    ],
+    "outgoing_relations": {
+      "employs": {
+        "cardinality": "m:n",
+        "target_types": ["Person"],
+        "attributes": ["role", "start_date", "end_date"]
+      },
+      "headquartered_in": {
+        "cardinality": "n:1",
+        "target_types": ["City", "Country"],
+        "attributes": ["since_date"]
+      },
+      "regulates": {
+        "cardinality": "m:n",
+        "target_types": [
+          "Company",
+          "Financial_Market",
+          "Financial_Instrument",
+          "Sector"
+        ],
+        "attributes": ["regulation_scope"]
+      },
+      "assigns_rating_to": {
+        "cardinality": "m:n",
+        "target_types": ["Company", "Country", "Financial_Instrument"],
+        "attributes": ["rating_value", "rating_date"]
+      },
+      "owns_stake_in": {
+        "cardinality": "m:n",
+        "target_types": ["Company", "Financial_Instrument"],
+        "attributes": ["ownership_percentage", "paid_amount"]
+      },
+      "subsidiary_of": {
+        "cardinality": "n:1",
+        "target_types": ["Institution"],
+        "attributes": ["ownership_percentage", "since_date"]
+      },
+      "partners_with": {
+        "cardinality": "m:n",
+        "target_types": ["Institution", "Organization", "Company"],
+        "attributes": ["partnership_type"]
+      },
+      "invests_in": {
+        "cardinality": "m:n",
+        "target_types": ["Company", "Country", "Financial_Instrument", "Financial_Market"],
+        "attributes": ["investment_amount", "investment_date"]
+      },
+      "issues": {
+        "cardinality": "m:n",
+        "target_types": ["Financial_Instrument"],
+        "attributes": ["issue_date", "issue_amount", "currency"]
+      },
+      "appoints_trustee": {
+        "cardinality": "m:n",
+        "target_types": ["Company", "Organization"],
+        "attributes": ["appointment_date", "reason"]
+      }
+    }
+  },
+  "Organization": {
+    "description": "Non-commercial entities such as universities, unions, associations, NGOs, and federations that influence or participate in economic contexts.",
+    "attributes": [
+      "name",
+      "organization_type",
+      "organization_type_detail",
+      "founding_date",
+      "mission_statement",
+      "membership_count",
+      "scope"
+    ],
+    "outgoing_relations": {
+      "employs": {
+        "cardinality": "m:n",
+        "target_types": ["Person"],
+        "attributes": ["role", "start_date", "end_date"]
+      },
+      "located_in": {
+        "cardinality": "n:1",
+        "target_types": ["City", "Country", "Location"],
+        "attributes": ["since_date"]
+      },
+      "partners_with": {
+        "cardinality": "m:n",
+        "target_types": ["Company", "Organization"],
+        "attributes": ["partnership_type"]
+      },
+      "has_members": {
+        "cardinality": "m:n",
+        "target_types": ["Company", "Person"],
+        "attributes": ["since_date", "role"]
+      }
+    }
+  },
+  "Sector": {
+    "description": "An industry or economic domain consisting of companies producing similar goods or services, such as banking, technology, energy, or steel.",
+    "attributes": ["name", "classification_code", "total_market_size"],
+    "outgoing_relations": {
+      "includes": {
+        "cardinality": "m:n",
+        "target_types": ["Company", "Product"]
+      }
+    }
+  },
+  "Financial_Instrument": {
+    "description": "Assets traded in financial markets, such as bonds, currencies, commodities, ETFs, derivatives, cryptocurrencies, investment funds, or financial indices (e.g., BIST 100, S&P 500). Company shares are not modeled as Financial_Instrument; a company's market presence is represented by Company -listed_on-> Financial_Market.",
+    "attributes": [
+      "name",
+      "isin",
+      "ticker_symbol",
+      "instrument_type",
+      "instrument_type_detail",
+      "issue_date",
+      "maturity_date",
+      "face_value",
+      "coupon_rate",
+      "current_price",
+      "currency",
+      "number_of_constituents",
+      "base_value"
+    ],
+    "outgoing_relations": {
+      "listed_on": {
+        "cardinality": "m:n",
+        "target_types": ["Financial_Market"],
+        "attributes": ["listing_start_date", "listing_end_date"]
+      },
+      "includes": {
+        "cardinality": "m:n",
+        "target_types": ["Financial_Instrument", "Company"]
+      }
+    }
+  },
+  "Financial_Market": {
+    "description": "The environment, mechanism, or platform where financial instruments are traded, including stock exchanges, forex markets, or over-the-counter systems.",
+    "attributes": [
+      "name",
+      "market_type",
+      "market_type_detail",
+      "establishment_date",
+      "market_cap",
+      "number_of_listings"
+    ],
+    "outgoing_relations": {
+      "located_in": {
+        "cardinality": "n:1",
+        "target_types": ["City", "Country", "Location"]
+      }
+    }
+  },
+  "Country": {
+    "description": "A sovereign geopolitical entity representing a nation-state, used to describe the location or jurisdiction of financial or institutional activities.",
+    "attributes": ["name", "capital_city", "currency_code"],
+    "outgoing_relations": {
+      "contains": {
+        "cardinality": "m:n",
+        "target_types": ["City", "Location", "Financial_Market"]
+      },
+      "central_bank": {
+        "cardinality": "m:n",
+        "target_types": ["Institution"]
+      },
+      "invests_in": {
+        "cardinality": "m:n",
+        "target_types": ["Company", "Country", "Financial_Instrument", "Financial_Market"],
+        "attributes": ["investment_amount", "investment_date"]
+      },
+      "sanctions": {
+        "cardinality": "m:n",
+        "target_types": ["Company", "Country"],
+        "attributes": ["sanction_type"]
+      },
+      "member_of": {
+        "cardinality": "m:n",
+        "target_types": ["Organization", "Institution"],
+        "attributes": ["start_date", "end_date"]
+      },
+      "minister": {
+        "cardinality": "m:n",
+        "target_types": ["Person"],
+        "attributes": ["ministry_name", "start_date", "end_date"]
+      },
+      "president": {
+        "cardinality": "m:n",
+        "target_types": ["Person"],
+        "attributes": ["start_date", "end_date"]
+      },
+      "trades_with": {
+        "cardinality": "m:n",
+        "target_types": ["Country", "Organization", "Company", "Institution"]
+      },
+      "prime_minister": {
+        "cardinality": "m:n",
+        "target_types": ["Person"],
+        "attributes": ["start_date", "end_date"]
+      },
+      "has_legal_issues_with": {
+        "cardinality": "m:n",
+        "target_types": ["Company", "Country", "Institution"],
+        "attributes": ["case_type", "description"]
+      }
+    }
+  },
+  "City": {
+    "description": "An urban administrative unit representing a specific locality within a country, often used to denote headquarters or market locations.",
+    "attributes": ["name", "major_industries"],
+    "outgoing_relations": {
+      "contains": {
+        "cardinality": "m:n",
+        "target_types": ["Location", "Financial_Market"]
+      }
+    }
+  },
+  "Location": {
+    "description": "Non-administrative geographic areas or regions that are not strictly countries or cities. Includes macro-regions (e.g., Europe, MENA, Asia-Pacific) and sub-city areas or industrial zones.",
+    "attributes": [
+      "name",
+      "location_type",
+      "location_type_detail",
+      "primary_activities"
+    ],
+    "outgoing_relations": {
+      "contains": {
+        "cardinality": "m:n",
+        "target_types": ["Country", "City", "Location", "Financial_Market"]
+      }
+    }
+  },
+  "Product": {
+    "description": "Tangible goods, services, or platforms produced or offered by companies, including consumer products, financial services, software products, and technology platforms.",
+    "attributes": [
+      "name",
+      "product_category",
+      "product_category_detail",
+      "brand_name",
+      "launch_date",
+      "target_market",
+      "price"
+    ],
+    "outgoing_relations": {
+      "component_of": {
+        "cardinality": "m:n",
+        "target_types": ["Product"]
+      },
+      "targets_sector": {
+        "cardinality": "m:n",
+        "target_types": ["Sector"]
+      }
+    }
+  },
+  "Facility": {
+    "description": "Physical or operational site such as a factory, branch, plant, data center, or office owned or operated by a company or institution.",
+    "attributes": [
+      "name",
+      "facility_type",
+      "facility_type_detail",
+      "opening_date",
+      "capacity",
+      "number_of_employees",
+      "investment_amount",
+      "operational_status",
+      "address"
+    ],
+    "outgoing_relations": {
+      "located_in": {
+        "cardinality": "n:1",
+        "target_types": ["City", "Country", "Location"],
+        "attributes": ["since_date"]
+      }
+    }
+  }
+}
