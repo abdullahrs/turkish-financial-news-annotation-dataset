@@ -81,6 +81,11 @@
         "target_types": ["Company"],
         "attributes": ["spinoff_date"]
       },
+      "transfers_to": {
+        "cardinality": "m:n",
+        "target_types": ["Company"],
+        "attributes": ["portfolio_nominal_value", "transfer_amount"]
+      },
       "listed_on": {
         "cardinality": "m:n",
         "target_types": ["Financial_Market"],
