@@ -114,7 +114,7 @@
       "partners_with": {
         "cardinality": "m:n",
         "target_types": ["Company", "Organization", "Institution"],
-        "attributes": ["partnership_type"]
+        "attributes": ["partnership_type", "partnership_detail"]
       },
       "invests_in": {
         "cardinality": "m:n",
@@ -224,7 +224,7 @@
       "partners_with": {
         "cardinality": "m:n",
         "target_types": ["Institution", "Organization", "Company"],
-        "attributes": ["partnership_type"]
+        "attributes": ["partnership_type", "partnership_detail"]
       },
       "invests_in": {
         "cardinality": "m:n",
@@ -273,7 +273,7 @@
       "partners_with": {
         "cardinality": "m:n",
         "target_types": ["Company", "Organization"],
-        "attributes": ["partnership_type"]
+        "attributes": ["partnership_type", "partnership_detail"]
       },
       "has_members": {
         "cardinality": "m:n",
