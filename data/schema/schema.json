@@ -69,7 +69,7 @@
       "operates_in_region": {
         "cardinality": "m:n",
         "target_types": ["Country", "City", "Location"],
-        "attributes": ["since_date"]
+        "attributes": ["since_date", "detail"]
       },
       "subsidiary_of": {
         "cardinality": "n:1",
