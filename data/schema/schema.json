@@ -1,12 +1,7 @@
 {
   "Person": {
     "description": "Individuals who play economic, financial, or managerial roles, such as executives, investors, or economists.",
-    "attributes": [
-      "name",
-      "date_of_birth",
-      "nationality",
-      "specialization"
-    ],
+    "attributes": ["name", "date_of_birth", "nationality", "specialization"],
     "outgoing_relations": {
       "owns_stake_in": {
         "cardinality": "m:n",
@@ -20,7 +15,12 @@
       },
       "invests_in": {
         "cardinality": "m:n",
-        "target_types": ["Company", "Country", "Financial_Instrument", "Financial_Market"],
+        "target_types": [
+          "Company",
+          "Country",
+          "Financial_Instrument",
+          "Financial_Market"
+        ],
         "attributes": ["investment_amount", "investment_date"]
       },
       "has_legal_issues_with": {
@@ -84,7 +84,12 @@
       "transfers_to": {
         "cardinality": "m:n",
         "target_types": ["Company"],
-        "attributes": ["portfolio_nominal_value", "transfer_amount"]
+        "attributes": [
+          "portfolio_nominal_value",
+          "transfer_amount",
+          "transferred_assets",
+          "detail"
+        ]
       },
       "listed_on": {
         "cardinality": "m:n",
@@ -113,7 +118,13 @@
       },
       "invests_in": {
         "cardinality": "m:n",
-        "target_types": ["Company", "Country", "Financial_Instrument", "Financial_Market", "Sector"],
+        "target_types": [
+          "Company",
+          "Country",
+          "Financial_Instrument",
+          "Financial_Market",
+          "Sector"
+        ],
         "attributes": ["investment_amount", "investment_date"]
       },
       "divests": {
@@ -217,7 +228,12 @@
       },
       "invests_in": {
         "cardinality": "m:n",
-        "target_types": ["Company", "Country", "Financial_Instrument", "Financial_Market"],
+        "target_types": [
+          "Company",
+          "Country",
+          "Financial_Instrument",
+          "Financial_Market"
+        ],
         "attributes": ["investment_amount", "investment_date"]
       },
       "issues": {
@@ -336,7 +352,12 @@
       },
       "invests_in": {
         "cardinality": "m:n",
-        "target_types": ["Company", "Country", "Financial_Instrument", "Financial_Market"],
+        "target_types": [
+          "Company",
+          "Country",
+          "Financial_Instrument",
+          "Financial_Market"
+        ],
         "attributes": ["investment_amount", "investment_date"]
       },
       "sanctions": {
