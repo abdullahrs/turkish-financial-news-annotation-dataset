@@ -416,6 +416,10 @@
         "cardinality": "m:n",
         "target_types": ["Product"]
       },
+      "variant_of": {
+        "cardinality": "n:1",
+        "target_types": ["Product"]
+      },
       "targets_sector": {
         "cardinality": "m:n",
         "target_types": ["Sector"]
