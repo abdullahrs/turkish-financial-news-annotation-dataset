@@ -131,6 +131,18 @@
         "target_types": ["Company", "Country", "Financial_Instrument"],
         "attributes": ["rating_value", "rating_date"]
       },
+      "assesses_company_rank": {
+        "cardinality": "m:n",
+        "target_types": ["Company"],
+        "attributes": [
+          "ranking_name",
+          "rank",
+          "ranking_basis",
+          "basis_value",
+          "currency",
+          "reporting_period"
+        ]
+      },
       "produces": {
         "cardinality": "m:n",
         "target_types": ["Product"]
