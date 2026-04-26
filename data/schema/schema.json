@@ -113,7 +113,7 @@
       },
       "invests_in": {
         "cardinality": "m:n",
-        "target_types": ["Company", "Country", "Financial_Instrument", "Financial_Market"],
+        "target_types": ["Company", "Country", "Financial_Instrument", "Financial_Market", "Sector"],
         "attributes": ["investment_amount", "investment_date"]
       },
       "issues": {
