@@ -116,6 +116,11 @@
         "target_types": ["Company", "Country", "Financial_Instrument", "Financial_Market", "Sector"],
         "attributes": ["investment_amount", "investment_date"]
       },
+      "divests": {
+        "cardinality": "m:n",
+        "target_types": ["Financial_Instrument"],
+        "attributes": ["disposal_amount", "disposal_date", "currency"]
+      },
       "issues": {
         "cardinality": "m:n",
         "target_types": ["Financial_Instrument"],
