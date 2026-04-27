@@ -245,6 +245,11 @@
         "cardinality": "m:n",
         "target_types": ["Company", "Organization"],
         "attributes": ["appointment_date", "reason"]
+      },
+      "fined": {
+        "cardinality": "m:n",
+        "target_types": ["Company", "Person", "Institution"],
+        "attributes": ["fine_amount", "currency", "fine_reason", "fine_date"]
       }
     }
   },
