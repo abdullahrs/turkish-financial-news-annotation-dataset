@@ -293,6 +293,11 @@
         "target_types": ["Company", "Organization"],
         "attributes": ["partnership_type", "partnership_detail"]
       },
+      "founded_by": {
+        "cardinality": "m:n",
+        "target_types": ["Person"],
+        "attributes": ["founding_date"]
+      },
       "has_members": {
         "cardinality": "m:n",
         "target_types": ["Company", "Person"],
