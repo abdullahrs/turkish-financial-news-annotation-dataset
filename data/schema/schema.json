@@ -127,6 +127,19 @@
         ],
         "attributes": ["investment_amount", "investment_date"]
       },
+      "borrows_from": {
+        "cardinality": "m:n",
+        "target_types": ["Company", "Institution", "Organization"],
+        "attributes": [
+          "loan_amount",
+          "currency",
+          "maturity",
+          "purpose",
+          "start_date",
+          "end_date",
+          "status"
+        ]
+      },
       "divests": {
         "cardinality": "m:n",
         "target_types": ["Financial_Instrument"],
@@ -354,6 +367,16 @@
       "central_bank": {
         "cardinality": "m:n",
         "target_types": ["Institution"]
+      },
+      "produces": {
+        "cardinality": "m:n",
+        "target_types": ["Product"],
+        "attributes": [
+          "production_volume",
+          "production_share",
+          "reporting_period",
+          "detail"
+        ]
       },
       "invests_in": {
         "cardinality": "m:n",
