@@ -293,6 +293,10 @@
         "target_types": ["Company", "Organization"],
         "attributes": ["partnership_type", "partnership_detail"]
       },
+      "offers_service": {
+        "cardinality": "m:n",
+        "target_types": ["Product"]
+      },
       "founded_by": {
         "cardinality": "m:n",
         "target_types": ["Person"],
@@ -340,7 +344,12 @@
       },
       "includes": {
         "cardinality": "m:n",
-        "target_types": ["Financial_Instrument", "Company"]
+        "target_types": ["Financial_Instrument", "Company"],
+        "attributes": ["change_type"]
+      },
+      "associated_with_region": {
+        "cardinality": "m:n",
+        "target_types": ["Country", "City", "Location"]
       }
     }
   },
