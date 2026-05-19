@@ -490,7 +490,7 @@
     }
   },
   "Facility": {
-    "description": "Physical or operational site such as a factory, branch, plant, data center, or office owned or operated by a company or institution.",
+    "description": "A physical or operational site (factory, branch, plant, data center, named office, store, warehouse) owned or operated by a company, organization or institution. The entity must denote the place itself, not a address; bare addresses are metadata ",
     "attributes": [
       "name",
       "facility_type",
